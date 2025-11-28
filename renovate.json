@@ -1,3 +1,15 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json"
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "groupName": "All dependencies",
+  "packageRules": [
+    {
+      "matchPackagePatterns": [".*"],   // alle packages
+      "groupName": "All updates",       // naam van de groep
+      "groupSlug": "all-updates"        // slug voor PR
+    }
+  ],
+  "prConcurrentLimit": 1,              // voorkomt meerdere PR's tegelijk
+  "prHourlyLimit": 1                   // beperkt frequentie
 }
+
